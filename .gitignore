@@ -3,6 +3,7 @@ node_modules/
 
 # Build output
 dist/
+code.tar.gz
 
 # Logs
 *.log
