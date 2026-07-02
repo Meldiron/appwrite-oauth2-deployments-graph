@@ -6,7 +6,9 @@ const CONSOLE_PROJECT_ID = 'console'
 const DISCOVERY_URL = `${API_ENDPOINT}/oauth2/${CONSOLE_PROJECT_ID}/.well-known/openid-configuration`
 
 export const CLIENT_ID = 'appwriter-graph'
-export const REDIRECT_URI = 'http://localhost:3000/redirect'
+// Derive the redirect URI from whatever origin the app is currently served on,
+// so it works across localhost, preview, and production without code changes.
+export const REDIRECT_URI = `${window.location.origin}/redirect`
 export const SCOPES = 'openid project:functions.read project:sites.read'
 
 const STORAGE = {
